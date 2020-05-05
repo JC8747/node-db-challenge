@@ -18,6 +18,7 @@ router.post("/", (req, res) => {
       res.status(200).json({ newTask });
     })
     .catch(error => {
+      console.log(error)
       res.status(500).json({ error: "Could not create new task" });
     });
 });
